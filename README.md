@@ -67,7 +67,7 @@ The framework implements a priority-based resource allocation algorithm that:
 
 def dynamic_resource_allocation(env, slices, clients):
     while True:
-        # Group clients by slice
+         Group clients by slice
         clients_by_slice = {}
         for client in clients:
             if client.base_station is None or not client.connected:
@@ -195,8 +195,11 @@ python run_5g_optimization.py
 
 # Or run individual components
 python optimize_slices.py        # Run optimization simulations
+
 python analyze_optimization_results.py  # Analyze results
+
 python generate_charts.py        # Generate visualization charts
+
 python create_dashboard.py       # Create the dashboard
 
 # Configuration
