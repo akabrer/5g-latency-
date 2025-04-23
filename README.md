@@ -18,7 +18,7 @@ This project presents a comprehensive framework for optimizing resource allocati
 
 The framework consists of several interdependent components:
 
-<img src="images/5g main.jpg" alt="system " width="300">
+<img src="images/Main 5g.jpg" alt="system " width="300">
 
 
 
