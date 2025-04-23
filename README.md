@@ -195,8 +195,11 @@ python run_5g_optimization.py
 
 # Or run individual components
 python optimize_slices.py        # Run optimization simulations
+
 python analyze_optimization_results.py  # Analyze results
+
 python generate_charts.py        # Generate visualization charts
+
 python create_dashboard.py       # Create the dashboard
 
 # Configuration
