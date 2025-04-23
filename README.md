@@ -172,28 +172,28 @@ Parameter Impact: Charts showing how each parameter affects performance.
 
 Comparative Analysis: Side-by-side comparison of different configurations.
 
-### Installation and Usage
+## Installation and Usage
 
-# Prerequisites
+### Prerequisites
 Python 3.7 or higher
 
 Required packages: simpy, numpy, matplotlib, seaborn, pyyaml, randomcolor, scikit-learn
 
 Installation
 
-# Create a virtual environment
+### Create a virtual environment
 conda create -n slicing-env python=3.7
 conda activate slicing-env
 
-# Install dependencies
+### Install dependencies
 pip install -r requirements.txt
 
 Running the Simulation
 
-# Run the full optimization workflow (recommended)
+### Run the full optimization workflow (recommended)
 python run_5g_optimization.py
 
-# Or run individual components
+### Or run individual components
 python optimize_slices.py        # Run optimization simulations
 
 python analyze_optimization_results.py  # Analyze results
@@ -202,7 +202,7 @@ python generate_charts.py        # Generate visualization charts
 
 python create_dashboard.py       # Create the dashboard
 
-# Configuration
+## Configuration
 The simulation parameters are defined in example-input.yml. Key parameters include:
 
 Slice configurations (delay tolerance, QoS class, bandwidth guarantees)
@@ -213,7 +213,7 @@ Client mobility patterns and distribution
 
 Simulation settings (time, client count, etc.)
 
-### Contributing
+## Contributing
 Contributions to this project are welcome. Areas for potential improvement include:
 
 Enhanced mobility models: Implementing more realistic client movement patterns
@@ -224,16 +224,16 @@ Multi-objective optimization: Extending the optimization to consider additional 
 
 Scalability improvements: Optimizing the simulation for larger networks
 
-### Contributors
+## Contributors
 - Ayush Mishra  
 - Piyush Jain  
 - Harsh Bachal  
 
-### License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-### Acknowledgments
+## Acknowledgments
 This framework was developed as a research project for 5G network optimization. Special thanks to all contributors who helped design, implement, and test this system.
 
-### Contact
+## Contact
 For any inquiries regarding this project, please reach out to the project maintainers.
