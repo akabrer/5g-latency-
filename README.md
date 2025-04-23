@@ -145,7 +145,7 @@ def _adapt_reserved_capacity(self):
                                    self.reserved_capacity - (self.init_capacity * 0.01))
 
 
-### Optimization Results
+## Optimization Results
 
 
 The framework achieves significant improvements over the baseline configuration through systematic parameter optimization:
@@ -160,7 +160,7 @@ The framework achieves significant improvements over the baseline configuration 
 | **Handover Ratio**        | 0.045              | 0.040                   | 11.1%        |
 | **SLA Violations**        | 0.00000            | 0.00000                 | 0%           |
 
-### Performance Visualization
+## Performance Visualization
 
 The framework provides comprehensive visualization through:
 
