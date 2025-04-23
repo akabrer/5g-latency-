@@ -67,7 +67,7 @@ The framework implements a priority-based resource allocation algorithm that:
 
 def dynamic_resource_allocation(env, slices, clients):
     while True:
-        # Group clients by slice
+         Group clients by slice
         clients_by_slice = {}
         for client in clients:
             if client.base_station is None or not client.connected:
