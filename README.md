@@ -145,6 +145,37 @@ def _adapt_reserved_capacity(self):
                                    self.reserved_capacity - (self.init_capacity * 0.01))
 
 
+                                   
+
+### Parameter Sweep
+The parameter sweep algorithm tests various configurations to identify the optimal resource allocation for each slice. The main goal is to evaluate how different settings for resource_reservation and bandwidth_guaranteed affect performance metrics like latency, throughput, and SLA violations.
+
+
+def generate_test_configs(base_config):
+    """Generate test configurations for parameter sweep"""
+    param_space = {
+        'urllc': {'resource_reservation': [0.1, 0.2, 0.3], 'bandwidth_guaranteed': [2, 5, 10]},
+        'iot': {'resource_reservation': [0.05, 0.1, 0.15], 'bandwidth_guaranteed': [5, 10, 15]},
+        'data': {'resource_reservation': [0.0, 0.05, 0.1], 'bandwidth_guaranteed': [500, 1000, 1500]}
+    }
+Parameter Space: Defines the potential values for resource_reservation and bandwidth_guaranteed for each slice type (URLLC, IoT, Data).
+
+    for slice_name, params in param_space.items():
+        for param_name, values in params.items():
+            for value in values:
+                test_config = copy.deepcopy(base_config)
+                test_config['slices'][slice_name][param_name] = value
+                test_config['settings']['simulation_time'] = 20
+                config_name = f"{slice_name}{param_name}{str(value).replace('.', '_')}"
+                configs.append((config_name, test_config))
+                config_info.append({'slice_name': slice_name, 'param_name': param_name, 'param_value': value})
+    return configs, config_info
+
+Configuration Generation: Iterates over the parameter combinations, modifies the base configuration for each, and stores the resulting configurations.
+
+Purpose:
+The parameter sweep enables the framework to explore different configurations and identify the most optimal setup for each slice, improving performance metrics such as latency, throughput, and SLA violations. By running simulations with various combinations, the system can find the ideal balance of resource reservation and bandwidth guarantees for each slice type.
+
 ## Optimization Results
 
 
